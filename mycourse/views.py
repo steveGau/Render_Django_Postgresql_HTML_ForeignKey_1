@@ -2,15 +2,15 @@ from django.shortcuts import render
 from mycourse.models import *
 
 def home(request):
-    data1 = Dept.objects.all()
+    data1 = mycourse.Dept.objects.all()
     for dept in data1:
         print(dept.dept_id, dept.name)
 
-    data2 = Course.objects.all()
+    data2 = mycourse.Course.objects.all()
     for course in data2:
         print(course.course_id, course.name)
 
-    data3 = Student.objects.all()
+    data3 = mycourse.Student.objects.all()
     for student in data3:
         print(student.user, student.dept_id, student.prn, student.name, student.DOB)
 
