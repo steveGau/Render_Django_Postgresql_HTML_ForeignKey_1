@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+	<h1>Query all department tables</h1>
+	{% for dept in query1 %}
+        <div class="col">
+			<p>{{dept.dept_id}}: {{dept.name}}</p>
+        </div>
+	{% endfor %} 
+	
+	<h1>Query all course tables</h1>
+	{% for course in query2 %}
+        <div class="col">
+			<p>{{course.course_id}}: {{course.name}}</p>
+        </div>
+	{% endfor %} 
+
+	<h1>Query all student tables</h1>
+	{% for student in query3 %}
+        <div class="col">
+			<p>{{student.name}}: {{student.dept_id}}: {{student.prn}}: {{student.DOB}}</p>
+        </div>
+	{% endfor %} 
+	
+</html>
